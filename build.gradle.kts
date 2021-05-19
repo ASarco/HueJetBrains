@@ -76,7 +76,7 @@ detekt {
 }
 
 changelog {
-    version = "0.0.6"
+    version = "0.0.6-beta"
     path = "${project.projectDir}/CHANGELOG.md"
     header = closure { "[$version] - ${date()}" }
     itemPrefix = "-"
