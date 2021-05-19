@@ -78,7 +78,7 @@ detekt {
 changelog {
     version = "0.0.6-beta"
     path = "${project.projectDir}/CHANGELOG.md"
-    header = closure { "[$version] - ${date()}" }
+    header = closure { "[$version] - " }
     itemPrefix = "-"
     keepUnreleasedSection = true
     unreleasedTerm = "[Unreleased]"
