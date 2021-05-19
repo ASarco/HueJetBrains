@@ -11,7 +11,7 @@ plugins {
     // gradle-intellij-plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
     id("org.jetbrains.intellij") version "0.4.22"
     // gradle-changelog-plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
-    id("org.jetbrains.changelog") version "0.5.0"
+    id("org.jetbrains.changelog") version "1.1.2"
     // detekt linter - read more: https://detekt.github.io/detekt/gradle.html
     id("io.gitlab.arturbosch.detekt") version "1.14.0"
     // ktlint linter - read more: https://github.com/JLLeitschuh/ktlint-gradle
@@ -73,6 +73,16 @@ detekt {
         xml.enabled = false
         txt.enabled = false
     }
+}
+
+changelog {
+    version = "0.0.6"
+    path = "${project.projectDir}/CHANGELOG.md"
+    header = closure { "[$version] - ${date()}" }
+    itemPrefix = "-"
+    keepUnreleasedSection = true
+    unreleasedTerm = "[Unreleased]"
+    groups = listOf("Added", "Changed", "Deprecated", "Removed", "Fixed", "Security")
 }
 
 ktlint {
