@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### [0.0.7-beta]
+
+- Support 2022.* IDE versions.
+
 ### [0.0.6-beta]
 
 - Support 2021.* IDE versions.
